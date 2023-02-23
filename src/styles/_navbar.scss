@@ -4,27 +4,38 @@
 
     &__lists {
         @include flex();
+        
     }
 
     &__list {
         padding: $p-1-5;
-
-        list-style: none; 
+        list-style: none;
     }
-
     &__link {
-        @include transition ();
-
         padding: $p-0-5 0;
 
         text-decoration: overline;
         color: $color-white;
         font-size: $font-12;
 
+        @include transition();
+
         &:hover {
-            text-decoration: none;
-            border-bottom: 1px solid $color-violet;
             color: $color-violet;
+            border-bottom: 1px solid $color-violet;
+            text-decoration: none;
         }
     }
+
+   
+}
+
+.navbar_list {
+    border-top:1px solid $color-white;
+    
+
+}
+
+.navbar_list:hover {
+    border-bottom:1px solid $color-violet;
 }
